@@ -1,0 +1,44 @@
+html {
+    font-family: Monaco;
+}
+
+header {
+    border: solid red;
+}
+
+
+nav {
+    border-style: solid;
+    border-color: navy;
+}
+
+
+
+body {
+    overflow: hidden;
+    margin: 0;
+    display: grid;
+    grid-template-rows: 1fr 1fr 8fr 1fr;
+    border-style: solid;
+    border-color: pink;
+    height: 100vh;
+
+}
+
+
+.part-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+footer {
+    display: flex;
+    border-style: solid;
+    border-color: forestgreen;
+}
+
+input {
+    width: 20%;
+}
