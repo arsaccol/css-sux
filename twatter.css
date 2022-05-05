@@ -32,24 +32,30 @@ body {
 .feed-area {
     display: flex;
     flex-direction: column;
-    
-    border-width: 1px;
-    border-style: solid;
-    border-color: #335588;
 }
 
 .twat-form {
+    display: grid;
+    grid-template-columns: 9fr 1fr;
+}
+
+.twat-textarea {
     color: white;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #335588;
     resize: none;
     outline: none;
-    background-color: #003755;
+    background-color: #114866;
     padding: 0.7em;
 }
 
 .twat-feed {
-    margin: 1%;
     overflow-y: auto;
+    padding: 1%;
+
+    height: 100%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #335588;
 }
 
 .trending-nav {
