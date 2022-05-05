@@ -1,0 +1,58 @@
+html {
+    font-family: Monaco;
+}
+
+a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+a:hover {
+    background-color: #11aaff;
+    color: white;
+}
+
+body {
+    color: white;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    margin: 0;
+    background-color: #1b384a;
+}
+
+.left-nav {
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+}
+
+.feed-area {
+    display: flex;
+    flex-direction: column;
+    
+    border-style: solid;
+    border-color: royalblue;
+}
+
+.twat-form {
+    color: white;
+    border-bottom: 1px solid black;
+    resize: none;
+    outline: none;
+    background-color: #003755;
+    padding: 0.7em;
+}
+
+.twat-feed {
+    margin: 1%;
+    overflow-y: auto;
+}
+
+.trending-nav {
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+}
