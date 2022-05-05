@@ -58,6 +58,10 @@ body {
     border-color: #335588;
 }
 
+.twat-card {
+    color: red;
+}
+
 .trending-nav {
     display: flex;
     flex-direction: column;

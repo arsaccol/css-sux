@@ -21,6 +21,7 @@ function TwatComponent({userId, id, body}, users)
 {
     const twatElement = document.createElement('div')
     twatElement.innerText = body
+    twatElement.className = 'twat-card'
 
     return twatElement
 }
