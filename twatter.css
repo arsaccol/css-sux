@@ -33,8 +33,9 @@ body {
     display: flex;
     flex-direction: column;
     
+    border-width: 1px;
     border-style: solid;
-    border-color: royalblue;
+    border-color: #335588;
 }
 
 .twat-form {
