@@ -29,15 +29,7 @@ function TwatComponent({userId, id, body}, users)
 function addTwatElements(twatElements)
 {
     const twatFeedElement = document.getElementById('twat-feed')
-    console.log(`Twat Feed: ${twatFeedElement}`)
-
-
-    const twats = []
-    for(let i = 0; i < 100; ++i) 
-        twats.push(TwatComponent({userId: 123, id: 1234, body: 'Das ist twat!'}, []))
-
-    console.log(twats)
-    twats.forEach(twat => twatFeedElement.appendChild(twat))
+    twatElements.forEach(twat => twatFeedElement.appendChild(twat))
 }
 
 
@@ -50,8 +42,11 @@ const main = async () => {
     //const users = await get_users()
     //console.log(users[0])
 
-    console.log('buga buga')
-    addTwatElements([])
+    const twats = []
+    for(let i = 0; i < 100; ++i) 
+        twats.push(TwatComponent({userId: 123, id: 1234, body: 'Das ist twat!'}, []))
+
+    addTwatElements(twats)
 }
 
 console.log('buga buga')
