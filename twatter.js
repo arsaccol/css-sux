@@ -36,11 +36,12 @@ function addTwatElements(twatElements)
 
 
 const main = async () => {
-    const posts =  await get_posts()
-    console.log(posts[0])
-
     //const users = await get_users()
     //console.log(users[0])
+    
+    //const posts =  await get_posts()
+    //console.log(posts[0])
+
 
     const twats = []
     for(let i = 0; i < 100; ++i) 
