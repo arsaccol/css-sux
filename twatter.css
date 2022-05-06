@@ -65,6 +65,9 @@ body {
 }
 
 .twat-card {
+    display: flex;
+    /*grid-template-columns: 1fr 5fr;*/
+
     color: white;
     display: block;
     overflow-wrap: wrap;
@@ -76,6 +79,15 @@ body {
 .twat-card:hover {
     background-color: #225977;
 }
+
+.twat-author-picture {
+    background-color: red;
+    overflow: hidden;
+    width: 4em;
+    height: 4em;
+    border-radius: 50%;
+}
+
 
 .trending-nav {
     display: flex;
