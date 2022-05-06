@@ -27,15 +27,27 @@ function TwatComponent({userId, id, body}, users)
         proPicElement.className = "twat-author-picture"
 
         const proPicImage = document.createElement('img')
-        proPicImage.src = `https://picsum.photos/id/${Math.floor(Math.random() * 1024)}/100`
-        console.log(`Image source: ${proPicImage.src}`)
+            proPicImage.src = `https://picsum.photos/id/${Math.floor(Math.random() * 1024)}/100`
+            console.log(`Image source: ${proPicImage.src}`)
         proPicElement.appendChild(proPicImage)
     twatCard.appendChild(proPicElement)
 
+    // twat body area (author name + twat body proper)
     const twatBodyDisplay = document.createElement('div')
         twatBodyDisplay.className = "twat-body-display"
-        twatBodyDisplay.innerText = body
     twatCard.appendChild(twatBodyDisplay)
+
+    // author name display
+    const twatAuthorElement = document.createElement('a')
+        twatAuthorElement.innerText = "Author Name"
+        twatAuthorElement.href="#0"
+        twatAuthorElement.className = "twat-author-name"
+    twatBodyDisplay.appendChild(twatAuthorElement)
+
+    // twat body proper
+    const twatBodyElement = document.createElement('div')
+        twatBodyElement.innerText = body
+    twatBodyDisplay.appendChild(twatBodyElement)
 
     return twatCard
 }
@@ -59,7 +71,7 @@ const main = async () => {
 
     const twats = []
     for(let i = 0; i < 10; ++i) 
-        twats.push(TwatComponent({userId: 123, id: 1234, body: 'Das ist twat!'}, []))
+        twats.push(TwatComponent({userId: 123, id: 1234, body: 'Twat body here!!! Yay! lol I dunno what to twat'}, []))
 
     addTwatElements(twats)
 }

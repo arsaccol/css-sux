@@ -11,6 +11,8 @@ a {
     font-weight: bold;
     text-decoration: none;
     transition: 0.3s;
+    border-radius: 5px;
+    padding: 0.5em;
 }
 
 a:hover {
@@ -65,11 +67,10 @@ body {
 }
 
 .twat-card {
-    display: flex;
-    /*grid-template-columns: 1fr 5fr;*/
+    display: grid;
+    grid-template-columns: 1fr 5fr;
 
     color: white;
-    display: block;
     overflow-wrap: wrap;
     min-height: 5em;
     outline: gray solid 1px;
@@ -81,11 +82,24 @@ body {
 }
 
 .twat-author-picture {
-    background-color: red;
+    background-color: navyblue;
     overflow: hidden;
+    max-width: 4em;
     width: 4em;
     height: 4em;
     border-radius: 50%;
+}
+
+.twat-author-name {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+    border-radius: 5px;
+    padding: 0;
+}
+.twat-author-name:hover {
+    background-color: #114866;
 }
 
 
