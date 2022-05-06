@@ -44,7 +44,7 @@ const main = async () => {
 
 
     const twats = []
-    for(let i = 0; i < 100; ++i) 
+    for(let i = 0; i < 200; ++i) 
         twats.push(TwatComponent({userId: 123, id: 1234, body: 'Das ist twat!'}, []))
 
     addTwatElements(twats)
