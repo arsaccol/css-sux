@@ -65,10 +65,16 @@ body {
 }
 
 .twat-card {
-    color: red;
+    color: white;
     display: block;
     overflow-wrap: wrap;
-    outline: red solid 1px;
+    min-height: 5em;
+    outline: gray solid 1px;
+    transition: 0.2s;
+    padding: .5em;
+}
+.twat-card:hover {
+    background-color: #225977;
 }
 
 .trending-nav {
