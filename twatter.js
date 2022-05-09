@@ -17,7 +17,7 @@ async function get_users()
 
 
 // (we show the username of the user with id equal to userId from post)
-function TwatComponent({userId, id, body}, users)
+function TwatComponent({username, body})
 {
     const twatCard= document.createElement('div')
     //twatCard.innerText = body
@@ -39,7 +39,7 @@ function TwatComponent({userId, id, body}, users)
 
     // author name display
     const twatAuthorElement = document.createElement('a')
-    twatAuthorElement.innerText = "Author Name"
+    twatAuthorElement.innerText = username
         twatAuthorElement.href="#0"
         twatAuthorElement.className = "twat-author-name"
     twatBodyDisplay.appendChild(twatAuthorElement)
@@ -69,10 +69,18 @@ const main = async () => {
     const posts =  await get_posts()
     console.log(posts[0])
 
+    const twats = posts.map(post => {
+        // select a user 
+        const userIndex = Math.floor(Math.random() * users.length)
 
-    const twats = []
-    for(let i = 0; i < 10; ++i) 
-        twats.push(TwatComponent({userId: 123, id: 1234, body: 'Twat body here!!! Yay! lol I dunno what to twat'}, []))
+        return TwatComponent({username: users[userIndex].name, body: post.body})
+    })
+
+
+
+    //const twats = []
+    //for(let i = 0; i < 10; ++i) 
+    //    twats.push(TwatComponent({userId: 123, id: 1234, body: 'Twat body here!!! Yay! lol I dunno what to twat'}, []))
 
     addTwatElements(twats)
 }
