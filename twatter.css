@@ -72,7 +72,6 @@ body {
 
     color: white;
     overflow-wrap: wrap;
-    min-height: 5em;
     outline: gray solid 1px;
     transition: 0.2s;
     padding: .5em;
