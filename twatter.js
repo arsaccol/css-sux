@@ -17,7 +17,7 @@ async function get_users()
 
 
 // (we show the username of the user with id equal to userId from post)
-function TwatComponent({username, body})
+function TwatComponent({imageID, username, body})
 {
     const twatCard= document.createElement('div')
     //twatCard.innerText = body
@@ -27,7 +27,7 @@ function TwatComponent({username, body})
         proPicElement.className = "twat-author-picture"
 
         const proPicImage = document.createElement('img')
-            proPicImage.src = `https://picsum.photos/id/${Math.floor(Math.random() * 1024)}/100`
+            proPicImage.src = `https://picsum.photos/id/${imageID}/100`
             console.log(`Image source: ${proPicImage.src}`)
         proPicElement.appendChild(proPicImage)
     twatCard.appendChild(proPicElement)
@@ -64,16 +64,16 @@ function addTwatElements(twatElements)
 
 const main = async () => {
     const users = await get_users()
-    console.log(users[0])
-    
     const posts =  await get_posts()
-    console.log(posts[0])
+    const imageIDs = users.map(user => {
+        return Math.floor(Math.random() * 1024)
+    })
 
     const twats = posts.map(post => {
         // select a user 
         const userIndex = Math.floor(Math.random() * users.length)
 
-        return TwatComponent({username: users[userIndex].name, body: post.body})
+        return TwatComponent({username: users[userIndex].name, body: post.body, imageID: imageIDs[userIndex]})
     })
 
 
