@@ -2,7 +2,13 @@
 async function get_posts()
 {
     const posts_url = 'https://jsonplaceholder.typicode.com/posts'
-    const posts = await (await fetch(posts_url)).json()
+    const posts = (await (await fetch(posts_url)).json()).map( post => {
+        return {
+            ...post,
+            body: post.body.replace(/\n/g, '')
+        }
+    })
+
 
     return posts
 }
@@ -28,7 +34,6 @@ function TwatComponent({imageID, username, body})
 
         const proPicImage = document.createElement('img')
             proPicImage.src = `https://picsum.photos/id/${imageID}/100`
-            console.log(`Image source: ${proPicImage.src}`)
         proPicElement.appendChild(proPicImage)
     twatCard.appendChild(proPicElement)
 

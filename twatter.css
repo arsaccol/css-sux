@@ -103,9 +103,9 @@ body {
     text-shadow: -2px 2px 15px black;
 }
 
-/*.twat-body:hover {
-    text-shadow: -2px 2px 8px white;
-}*/
+.twat-body {
+    text-align: start;
+}
 
 
 .trending-nav {
