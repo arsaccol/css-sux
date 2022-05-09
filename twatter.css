@@ -82,6 +82,7 @@ body {
 }
 
 .twat-author-picture {
+    display: flex;
     background-color: navyblue;
     overflow: hidden;
     max-width: 4em;
@@ -99,8 +100,13 @@ body {
     padding: 0;
 }
 .twat-author-name:hover {
-    background-color: #114866;
+    background-color: #225977;
+    text-shadow: -2px 2px 15px black;
 }
+
+/*.twat-body:hover {
+    text-shadow: -2px 2px 8px white;
+}*/
 
 
 .trending-nav {

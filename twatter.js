@@ -39,7 +39,7 @@ function TwatComponent({userId, id, body}, users)
 
     // author name display
     const twatAuthorElement = document.createElement('a')
-        twatAuthorElement.innerText = "Author Name"
+    twatAuthorElement.innerText = "Author Name"
         twatAuthorElement.href="#0"
         twatAuthorElement.className = "twat-author-name"
     twatBodyDisplay.appendChild(twatAuthorElement)
@@ -47,6 +47,7 @@ function TwatComponent({userId, id, body}, users)
     // twat body proper
     const twatBodyElement = document.createElement('div')
         twatBodyElement.innerText = body
+        twatBodyElement.className = "twat-body"
     twatBodyDisplay.appendChild(twatBodyElement)
 
     return twatCard
@@ -62,11 +63,11 @@ function addTwatElements(twatElements)
 
 
 const main = async () => {
-    //const users = await get_users()
-    //console.log(users[0])
+    const users = await get_users()
+    console.log(users[0])
     
-    //const posts =  await get_posts()
-    //console.log(posts[0])
+    const posts =  await get_posts()
+    console.log(posts[0])
 
 
     const twats = []
